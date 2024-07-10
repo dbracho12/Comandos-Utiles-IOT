@@ -1,26 +1,47 @@
 # Comandos básicos de consola de linux
 
-Lanzar el mosquitto MQTT broker
-```sh
-$ mosquitto
-```
 
-Verificar que el servicio este en ejecución, en este caso el servicio de mosquitto:
+Obtener la IP del dispositivo
 ```sh
-$ sudo systemctl status <nombre_servicio>
+$ ifconfig
 ```
-
-Verificar que aplicaciones está utilizando cada puerto del sistema:
+Conectarse por SSH
 ```sh
-$ sudo netstat -tulpn
+$ ssh inove@<ip_dispositivo>
 ```
-
-Suscribirse a un tópico MQTT con mosquitto_sub:
+Borrar todas las conexiones registradas de SSH
 ```sh
-$ mosquitto_sub -t <nombre_topico>
+$ del .ssh\known_hosts
 ```
-
-Publicar a un tópico MQTT con mosquitto_pub:
+Observar el contenido de una carpeta
 ```sh
-$ mosquitto_pub -t <nombre_topico> -m <mensaje>
+$ ls -l
+```
+Observar el contenido de un archivo
+```sh
+$ cat <nombre_archivo>
+```
+Ingresar a una carpeta
+```sh
+$ cd <nombre_carpeta>
+```
+Crear una carpeta
+```sh
+$ mkdir <nombre_carpeta>
+```
+Crear un archivo con nano
+```sh
+$ nano <nombre_archivo>
+```
+Eliminar una carpeta
+```sh
+$ rm -R <nombre_carpeta>
+```
+Eliminar un archivo
+```sh
+$ rm <nombre_archivo>
+```
+Conocer la ruta completa de donde la consola está ubicada
+```sh
+$ pwd
 ```
